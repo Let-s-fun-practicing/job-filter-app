@@ -30,20 +30,31 @@ body {
 }
 /* --------------------------------- */
 header{
-
+    background-color: var(--primary-blue);
 }
-/* --------------------------------- */
+header .header-desktop{
+    display: none;
+    width: 100%;
+}
+header .header-mobile{
+    width: 100%;
+}
+/* ----------PADRES----------- */
 main{
+    width: 100%;
+    height: auto; 
+}
+/* section */.main__job__cards{
     width: 100%;
     min-width: var(--width-mobile);
     max-width: var(--width-desktop);
-    
+    height: auto;
 }
-section{
+.job__cards__container{
     width: 90%;
     min-width: 336px;
     max-width: 1296px;
-    margin: 25px auto;
+    margin: 60px auto;
 }
 .card{
     width: 100%;
@@ -52,8 +63,10 @@ section{
     border-left: 5px solid var(--primary-blue);
     position: relative;
     padding: 15px;
+    margin-bottom: 40px;
 }
 /* -------------------------------- */
+/* ------------IMAGEN---------------- */
 .card__left{
     position: absolute;
     top: -20px;   
@@ -61,15 +74,35 @@ section{
 .card__left img{
     width: 50px;   
 }
-/* --------------------------------- */
+/* -------------------------------- */
+/* -----------TEXTO------------ */
 .card__center{
     margin-top: 25px;
 }
-.card__center p{
+.card__center .company{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    
+}
+.card__center .company p{
     color: var(--primary-blue);
     font-size: 1.3rem;
     font-weight: var(--weight-strong);
-    margin-bottom: 15px;
+    margin-right: 15px;
+}
+.card__center .company .new, .featured{
+    padding: 4px 8px;
+    border: none;
+    border-radius: 50px;
+    background-color: var(--primary-blue);
+    color: white;
+    font-size: 1.3rem;
+    font-weight: var(--weight-strong);
+    margin: 0 5px;
+}
+.featured{
+    background-color: var(--gray-very-dark);
 }
 .card__center h4{
     font-size: 1.6rem;
@@ -82,13 +115,67 @@ section{
     justify-content: space-between;
     margin-bottom: 15px;
 }
-.card__center ul .first-li{
-    list-style: none;
-}
 .card__center ul li{
     font-size: 1.4rem;
     color: var(--gray-dark);
 }
+.card__center ul .first-li{
+    list-style: none;
+}
+/* -------------------------------- */
+/* ---------LINEA GRIS------------- */
  hr{
     margin-bottom: 15px;
+}
+/* -------------------------------- */
+/* -----------BOTONES-------------- */
+.card__right{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items:center;
+    justify-content: flex-start;
+}
+.card__right button{
+    margin: 5px 5px;
+    padding: 10px 13px;
+    color: var(--primary-blue);
+    font-weight: var(--weight-strong);
+    background-color: var(--gray-filter);
+    border-radius: 5px;
+    border: none;
+}
+
+@media only screen and (min-width: 768px) {
+    header .header-mobile{
+        display: none;
+    }
+    header .header-desktop{
+        display: inline;
+        width: 100%;
+    }
+    .card{
+        display: flex;
+
+    }
+    .card__left{
+        position: static;
+        margin-right: 20px;
+        display: flex;
+        align-items: center;
+    }
+    .card__left img{
+        width: 80px;
+    }
+    hr{
+        display: none;
+    }
+    .container-left{
+        display: flex;
+        width: 50%;
+    }
+    .card__right{
+        width: 50%;
+        justify-content: flex-end;
+    }
 }
