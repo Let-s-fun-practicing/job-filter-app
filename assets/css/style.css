@@ -110,17 +110,22 @@ main{
     margin-bottom: 15px;
 }
 .card__center ul{
-    width: 230px;
+    width: 250px;
     display: flex;
     justify-content: space-between;
     margin-bottom: 15px;
+    
 }
 .card__center ul li{
     font-size: 1.4rem;
     color: var(--gray-dark);
+    text-indent: -5px;
+    /* margin: 0 5px; */
 }
 .card__center ul .first-li{
     list-style: none;
+    /* padding-left: 2px; */
+    text-indent: 0px;
 }
 /* -------------------------------- */
 /* ---------LINEA GRIS------------- */
